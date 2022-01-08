@@ -1,0 +1,13 @@
+.main {
+  display: flex;
+}
+.compare-box {
+  margin: 50px;
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
