@@ -1,8 +1,8 @@
 import "./App.css";
-import YesOrNo from "./yesOrNo/YesOrNo";
+import GachaGame from "./gachaGame/GachaGame";
 
 function App() {
-  return <YesOrNo />;
+  return <GachaGame />;
 }
 
 export default App;
