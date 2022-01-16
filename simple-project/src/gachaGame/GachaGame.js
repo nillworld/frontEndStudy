@@ -33,7 +33,7 @@ const GachaGame = () => {
     if (randomNumber <= chance) {
       setPresentStep(presentStep + 1);
       console.log("chanceUp", chanceUp);
-      setChance(chance * (0.9).toFixed(2) + chanceUp);
+      setChance((chance * 0.9).toFixed(2));
       setChanceUp(0);
     }
   };
