@@ -7,11 +7,6 @@ const GachaGame = () => {
   const [tuition, setTuition] = useState(90);
   const [chanceUp, setChanceUp] = useState(0);
   const [chanceUpSuccess, setChanceUpSuccess] = useState("");
-  const setInputOnChange = (e) => {
-    if (e.target.value <= 100) {
-      setInputValue(e.target.value);
-    }
-  };
   useEffect(() => {
     console.log(inputValue);
   }, [inputValue]);
