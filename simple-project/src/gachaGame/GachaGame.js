@@ -1,15 +1,11 @@
 import { useEffect, useState } from "react";
 
 const GachaGame = () => {
-  const [inputValue, setInputValue] = useState("");
   const [presentStep, setPresentStep] = useState(0);
   const [chance, setChance] = useState(90);
   const [tuition, setTuition] = useState(90);
   const [chanceUp, setChanceUp] = useState(0);
   const [chanceUpSuccess, setChanceUpSuccess] = useState("");
-  useEffect(() => {
-    console.log(inputValue);
-  }, [inputValue]);
 
   const tuitionOnChange = (e) => {
     setTuition(e.target.value);
