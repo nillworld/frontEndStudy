@@ -1,12 +1,14 @@
 import { createStore } from "redux";
 import { Provider, useSelector, useDispatch, connect } from "react-redux";
 
-//state 안에 있는 store를 어떻게 바꿀것인가
+//store안에 있는 state를 어떻게 바꿀것인가
 function reducer(currentState, action) {
+  console.log("reducer호출");
   if (currentState === undefined) {
     return { number: 1 };
   }
   const newState = { ...currentState };
+
   if (action.type === "PLUS") {
     newState.number++;
   }
@@ -37,6 +39,8 @@ const Left2 = () => {
 const Left3 = () => {
   console.log("3");
   const number = useSelector((state) => state.number);
+  const state = useSelector((state) => state);
+  console.log(state);
   return (
     <div>
       Left3
@@ -62,6 +66,7 @@ const Right2 = () => {
   );
 };
 const Right3 = () => {
+  // dispatch는 state 변경 트리거 state는 store를 통해 관리되므로 createStore가 호출됨.
   const dispatch = useDispatch();
   return (
     <div>
