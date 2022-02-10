@@ -49,6 +49,14 @@ const Left3 = () => {
   );
 };
 
+const Left4 = () => {
+  console.log("4");
+  const number = useSelector((state) => state.number);
+  const state = useSelector((state) => state);
+  console.log(state);
+  return <div>Left4</div>;
+};
+
 const Right1 = () => {
   return (
     <div>
