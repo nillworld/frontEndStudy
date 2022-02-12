@@ -1,5 +1,6 @@
 import { createStore } from "redux";
 import { Provider, useSelector, useDispatch, connect } from "react-redux";
+import "./ReduxLearn.css";
 
 //store안에 있는 state를 어떻게 바꿀것인가
 function reducer(currentState, action) {
@@ -43,8 +44,8 @@ const Left3 = () => {
   console.log(state);
   return (
     <div>
-      Left3
-      <div>number:{number}</div>
+      <h1>Left3</h1>
+      <h1>number:{number}</h1>
     </div>
   );
 };
@@ -92,13 +93,13 @@ const Right3 = () => {
 
 const ReduxLearn = () => {
   return (
-    <div>
+    <div id="container">
       {/* provider는 store를 제공할 범위 설정/ 반드시 store 필요 */}
       <Provider store={store}>
-        <div>rr</div>
-        <Left1></Left1>
-        <h2>-------------------</h2>
-        <Right1></Right1>
+        <div id="grid">
+          <Left1></Left1>
+          <Right1></Right1>
+        </div>
       </Provider>
     </div>
   );
